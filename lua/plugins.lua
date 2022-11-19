@@ -29,7 +29,7 @@ return require('packer').startup(function()
     -- nvim-cmp
     use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
     use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
-    use 'hrsh7th/cmp-path'     -- { name = 'path' }
+    use 'hrsh7th/cmp-path'     -- { name = 'path' R
     use 'hrsh7th/cmp-cmdline'  -- { name = 'cmdline' }
     use 'hrsh7th/nvim-cmp'
     -- vsnip
@@ -38,6 +38,14 @@ return require('packer').startup(function()
     use 'rafamadriz/friendly-snippets'
     -- lspkind
     use 'onsails/lspkind-nvim'
+    -- 代码格式化
+    use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+    -- rust 增强工具
+    use "simrat39/rust-tools.nvim" 
+    -- 浮动终端
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+    end}
 end)
 
 
