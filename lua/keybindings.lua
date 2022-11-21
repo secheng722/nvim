@@ -126,6 +126,7 @@ pluginKeys.mapTsLSP = function(mapbuf)
   mapbuf("n", "gi", ":TSLspImportAll<CR>", opt)
 end
 
+
 -- Telescope
 -- 查找文件
 map("n", "<c-f>", ":Telescope find_files<CR>", opt)

@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/lishaocheng/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/Users/lishaocheng/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/lishaocheng/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -200,11 +205,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lishaocheng/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/Users/lishaocheng/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-vsnip"] = {
     loaded = true,

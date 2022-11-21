@@ -14,7 +14,7 @@ require('plugin-config.lua-line')
 require('lsp/setup')
 require('lsp/nvim-cmp')
 
-vim.cmd([[colorscheme tokyonight]])
-
+vim.cmd([[colorscheme nord]])
+vim.cmd([[highlight Normal guibg=NONE ctermbg=None]])
 
 
