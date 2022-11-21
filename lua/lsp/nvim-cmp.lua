@@ -33,7 +33,6 @@ cmp.setup {
   }, { { name = 'buffer' },
        { name = 'path' }
     }),
-
   -- 快捷键
   mapping = require'keybindings'.cmp(cmp),
   -- 使用lspkind-nvim显示类型图标
@@ -65,3 +64,11 @@ cmp.setup.cmdline(':', {
       { name = 'cmdline' }
     })
 })
+
+-- If you want insert `(` after select function or method item
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require('cmp')
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)

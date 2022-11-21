@@ -4,8 +4,13 @@ local lsp_installer = require "nvim-lsp-installer"
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 -- { key: 语言 value: 配置文件 }
 local servers = {
-  sumneko_lua = require "lsp.lua", -- /lua/lsp/lua.lua
-  rust_analyzer = require "lsp.rust",
+  sumneko_lua = require "lsp.config.lua", -- /lua/lsp/lua.lua
+  rust_analyzer = require "lsp.config.rust",
+  html = require "lsp.config.html",
+  cssls = require "lsp.config.css",
+  emmet_ls = require "lsp.config.emmet",
+  jsonls = require("lsp.config.json"),
+  tsserver = require("lsp.config.ts"),
 }
 
 -- 自动安装 LanguageServers
@@ -24,6 +29,7 @@ lsp_installer.on_server_ready(function(server)
   if opts then
     opts.on_attach = function(_, bufnr)
       local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
       -- local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
       -- 绑定快捷键
       require('keybindings').maplsp(buf_set_keymap)
@@ -34,6 +40,3 @@ lsp_installer.on_server_ready(function(server)
     server:setup(opts)
   end
 end)
-
-
-

@@ -8,11 +8,13 @@ require('plugins')
 require('plugin-config/nvim-tree')
 require('plugin-config/bufferline')
 require('plugin-config/nvim-treesitter')
+require('plugin-config.toggleterm')
+require('plugin-config.lua-line')
 -- lsp
 require('lsp/setup')
 require('lsp/nvim-cmp')
 
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme tokyonight]])
 
 
 

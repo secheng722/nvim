@@ -9,6 +9,7 @@ local opt={noremap=true,silent=true}
 -- 之后就可以这样映射按键了
 -- map('模式','按键','映射为XX',opt)
 
+
 -- ctrl U,D   9行上下
 map("n", "<C-u>", "9k", opt)
 map("n", "<C-d>", "9j", opt)
@@ -25,11 +26,18 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>', opt)
 map("n", "<leader>h", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<leader>l", ":BufferLineCycleNext<CR>", opt)
 
+
 -- 切换左右上下窗口
 map('n', '<C-h>', '<C-w>h',opt)
 map('n', '<C-l>', '<C-w>l',opt)
 map('n', '<C-k>', '<C-w>k',opt)
 map('n', '<C-j>', '<C-w>j',opt)
+
+-- 分屏相关
+map("n", "sv", ":vsplit<CR>", opt)
+map("n", "sh", ":split<CR>", opt)
+map("n", "sc", "<C-w>c", opt)
+map("n", "so", "<C-w>o", opt) -- close others
 
 
 local pluginKeys = {}
@@ -52,7 +60,7 @@ pluginKeys.maplsp = function(mapbuf)
   mapbuf('n', 'gn', '<cmd>lua vim.diagnostic.goto_next()<CR>', opt)
   -- mapbuf('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opt)
   -- leader + =
-  mapbuf('n', '<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>', opt)
+  mapbuf('n', '<leader>=', '<cmd>lua vim.lsp.buf.format{async=true}<CR>', opt)
   -- mapbuf('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opt)
   -- mapbuf('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opt)
   -- mapbuf('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opt)
@@ -93,9 +101,9 @@ pluginKeys.cmp = function(cmp)
     end, { "i", "s" }),
 
     -- 出现补全
-    ['<A-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+    ['<C-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
     -- 取消
-    ['<A-,>'] = cmp.mapping({
+    ['<C-,>'] = cmp.mapping({
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     }),
@@ -110,6 +118,20 @@ pluginKeys.cmp = function(cmp)
     ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
   }
 end
+
+-- typescript 快捷键
+pluginKeys.mapTsLSP = function(mapbuf)
+  mapbuf("n", "gs", ":TSLspOrganize<CR>", opt)
+  mapbuf("n", "gr", ":TSLspRenameFile<CR>", opt)
+  mapbuf("n", "gi", ":TSLspImportAll<CR>", opt)
+end
+
+-- Telescope
+-- 查找文件
+map("n", "<c-f>", ":Telescope find_files<CR>", opt)
+-- 全局搜索
+map("n", "<c-p>", ":Telescope live_grep<CR>", opt)
+
 
 return pluginKeys
 
