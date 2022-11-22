@@ -10,6 +10,7 @@ require('plugin-config/bufferline')
 require('plugin-config/nvim-treesitter')
 require('plugin-config.toggleterm')
 require('plugin-config.lua-line')
+require('plugin-config.fidget')
 -- lsp
 require('lsp/setup')
 require('lsp/nvim-cmp')

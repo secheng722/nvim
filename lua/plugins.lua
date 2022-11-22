@@ -15,7 +15,7 @@ return require('packer').startup(function()
   }
   -- lualine
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-  use("arkav/lualine-lsp-progress")
+  use 'j-hui/fidget.nvim'
   -- treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
