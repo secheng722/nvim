@@ -1,21 +1,27 @@
--- vim 基础设置
-require('basic')
--- 快捷键设置
-require('keybindings')
--- 插件管理
-require('plugins')
--- 插件配置
-require('plugin-config/nvim-tree')
-require('plugin-config/bufferline')
-require('plugin-config/nvim-treesitter')
-require('plugin-config.toggleterm')
-require('plugin-config.lua-line')
-require('plugin-config.fidget')
--- lsp
-require('lsp/setup')
-require('lsp/nvim-cmp')
+-- require("impatient")
+require("utils.global")
 
-vim.cmd([[colorscheme nord]])
-vim.cmd([[highlight Normal guibg=NONE ctermbg=None]])
+-- 基础配置
+require("basic")
+-- 快捷键映射
+require("keybindings")
+-- Packer插件管理
+require("plugins")
+-- 主题设置
+require("colorscheme")
+-- 自动命令
+require("autocmds")
 
+-- 内置LSP
+require("lsp.setup")
+-- 自动补全
+require("cmp.setup")
+-- 格式化
+require("format.setup")
+-- DAP
+require("dap.setup")
 
+-- require("dap.vimspector")
+-- utils
+-- 复制到windows剪贴板
+-- require('utils.fix-yank')
