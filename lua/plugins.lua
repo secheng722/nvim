@@ -286,8 +286,6 @@ packer.startup({
         require("plugin-config.gitsigns")
       end,
     })
-    -- lazygit
-    use({ "kdheepak/lazygit.nvim" })
     -- vimspector
     use({
       "puremourning/vimspector",
