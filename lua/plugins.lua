@@ -196,6 +196,8 @@ packer.startup({
         require("plugin-config.mkdnflow")
       end,
     })
+    -- markdown-preview.nvim
+    use({ "iamcco/markdown-preview.nvim" })
 
     -- venn 画图
     use({
