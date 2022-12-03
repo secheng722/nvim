@@ -76,6 +76,10 @@ cmp.setup({
       group_index = 1,
     },
     {
+      name = "cmp_tabnine",
+      group_index = 1,
+    },
+    {
       name = "buffer",
       group_index = 2,
     },
@@ -118,3 +122,4 @@ cmp.setup.filetype({ "markdown", "help" }, {
 })
 
 require("cmp.luasnip")
+require("cmp.tabnine")

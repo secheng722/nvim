@@ -250,6 +250,8 @@ packer.startup({
     use("b0o/schemastore.nvim")
     -- Rust 增强
     use("simrat39/rust-tools.nvim")
+    -- tabnineAi补全
+    use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
     --------------------- colorschemes --------------------
     -- tokyonight
     -- use({
