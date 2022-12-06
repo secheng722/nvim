@@ -53,6 +53,8 @@ null_ls.setup({
     -- toml
     -- cargo install taplo-cli
     formatting.taplo,
+    --dart
+    formatting.dart_format,
     -----------------------------------------------------
     -- Diagnostics  ---------------------
     -- diagnostics.eslint.with({
