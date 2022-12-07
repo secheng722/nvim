@@ -252,6 +252,9 @@ packer.startup({
     use("simrat39/rust-tools.nvim")
     -- tabnineAi补全
     use({ "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" })
+    --flutter 增强
+    use({ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" })
+
     --------------------- colorschemes --------------------
     -- tokyonight
     -- use({
