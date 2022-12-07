@@ -7,6 +7,7 @@ local opts = {
     common.keyAttach(bufnr)
   end,
 }
+require("flutter-tools").setup({})
 
 return {
   on_setup = function(server)
