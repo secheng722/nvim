@@ -55,6 +55,8 @@ null_ls.setup({
     formatting.taplo,
     --dart
     formatting.dart_format,
+    --C
+    formatting.clang_format,
     -----------------------------------------------------
     -- Diagnostics  ---------------------
     -- diagnostics.eslint.with({
