@@ -14,10 +14,5 @@
 - nvim-treesitter ensure_installed 
 - mason_config ensure_installed 
 
-
-## keymap
-
-| 按键   | 作用    |
-|--------------- | --------------- |
-| `ctrl+j ctrl+k`    | 命令行下 下一个`<C-n>` 上一个 `<C-p>`  |
-|`<leader>w` | 保存`:w<CR>`|
+## language
+dart,rust,
