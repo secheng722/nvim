@@ -196,9 +196,6 @@ packer.startup({
         require("plugin-config.mkdnflow")
       end,
     })
-    -- markdown-preview.nvim
-    use({ "iamcco/markdown-preview.nvim" })
-
     -- venn 画图
     use({
       "jbyuki/venn.nvim",
@@ -243,7 +240,6 @@ packer.startup({
     -- TypeScript 增强
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
     use("jose-elias-alvarez/typescript.nvim")
-
     -- Lua 增强
     use("folke/neodev.nvim")
     -- JSON 增强
