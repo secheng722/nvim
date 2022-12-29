@@ -73,7 +73,7 @@ local servers = {
   -- remark_ls = require("lsp.config.markdown"),
   clangd = require("lsp.config.clangd"),
   cmake = require("lsp.config.cmake"),
-  dartls = require("lsp.config.dart"),
+  -- dartls = require("lsp.config.dart"),
 }
 
 for name, config in pairs(servers) do
