@@ -86,4 +86,5 @@ for name, config in pairs(servers) do
   end
 end
 
+require("flutter-tools").setup({})
 require("lsp.ui")
