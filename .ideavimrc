@@ -85,7 +85,7 @@ nmap <leader>fm <action>(ReformatCode) \| <action>(OptimizeImports)
 " g: Git ⭐️
 let g:WhichKeyDesc_Git = "<leader>g Git"
 let g:WhichKeyDesc_Git_RollbackHunk = "<leader>gr RollbackHunk"
-nmap <leader>gr :<action> Vcs.RollbackChangedLines<CR>
+nmap <leader>gr <action>(ChangesView.Revert)<CR>
 let g:WhichKeyDesc_Git_ShowTabbedFileHistory= "<leader>gh ShowTabbedFileHistory"
 nmap <leader>gh <action>(Vcs.ShowTabbedFileHistory)
 
@@ -114,8 +114,9 @@ let g:WhichKeyDesc_Show_FileStructure = "<leader>ss ShowFileStructure"
 nmap <leader>ss <action>(FileStructurePopup)
 let g:WhichKeyDesc_Show_Bookmarks = "<leader>sb ShowBookmarks"
 nmap <leader>sb <action>(ShowBookmarks)
-let g:WhichKeyDesc_Show_ParameterInfo = "<leader>sb ShowParameterInfo"
+let g:WhichKeyDesc_Show_ParameterInfo = "<leader>sp ShowParameterInfo"
 nmap <leader>sp <action>(ParameterInfo)
+
 
 " r: Run/Re ⭐️
 let g:WhichKeyDesc_RunOrRe = "<leader>r RunOrRe"
@@ -149,6 +150,10 @@ nmap <leader>zc <action>(CollapseAllRegions)
 " c: Close ⭐️;
 let g:WhichKeyDesc_CloseBuffer = "<leader>c CloseBuffer"
 nmap <leader>c :q!<CR>
+
+" t: Translate⭐️;
+let g:WhichKeyDesc_Translate= "<leader>t Translate"
+vmap <leader>t <action>($EditorTranslateAction)
 
 " e: Toggle Explorer ⭐️
 let g:WhichKeyDesc_ToggleExplorerOrExtract = "<leader>e ToggleExplorer"
